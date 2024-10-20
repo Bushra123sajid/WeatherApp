@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Hamburger Menu -->
+    <header>
+      <img src="weatherlogo.png" alt="Logo" class="logo-icon">
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="dashboard.html"><img src="dashboardicon.png" class="hamicon"> Dashboard</a></li>
+          <li><a href="tables.html"><img src="tablesicon.png" class="hamicon"> Tables</a></li>
+        </ul>
+      </nav>
+    </header>
+     <!-- Sidebar -->
+      <nav class="sidebar">
+      <div class="logo">
+        <img src="weatherlogo.png" alt="Logo" class="logo-icon"> WeatherApp
+      </div>
+      <ul>
+        <li><a href="dashboard.html"><img src="dashboardicon.png" class="nav-icon"> Dashboard</a></li>
+        <li><a href="tables.html"><img src="tablesicon.png" class="nav-icon"> Tables</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="main-content">     
+        <div class="toplayer">      
+         <!-- Search Bar -->       
+          <div class="search-bar">         
+            <input type="text" placeholder="Search city..." id="searchCity">         
+            <button id="searchButton">Get Weather</button>     
+             </div>  
+             <!-- User Profile (top-right corner) --> 
+     <div class="user-profile">     
+        <div class="profile-pic" id="profilePic" style="background-image: url('https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?size=338&ext=jpg&ga=GA1.1.1369675164.1728691200&semt=ais_hybrid-rr-similar');"></div>   
+    </div>    
+ </div>   
+      <!-- Weather Widget -->
+ <div id="weatherWidget" class="weather-widget">
+ <div id="loadingSpinner"></div>
+ <video id="weatherVideo" autoplay muted loop></video> <!-- background Video -->
+ 
+ <h1 id="cityName">Weather Details</h1>
+ 
+ <div class="weather-icon-container">
+     <img id="weatherIcon" src="weathericon.png" alt="Weather Icon">
+ </div>
+ 
+     <div class="temperature-container">
+         <p id="temp">
+             <img src="temperature.png" alt="Temperature" class="weather-icon">
+             Temperature: --°C
+         </p>
+         <button id="toggleUnit">°F</button>
+     </div>
+    <div class="desc">
+     <p id="weatherDesc">
+         <img src="weather.png" alt="Weather" class="weather-icon">
+         Weather description
+     </p>
+ </div>
+  <div class="humi">
+     <p id="humidity">
+         <img src="humidity.png" alt="Humidity" class="weatherr-icon">
+         Humidity: --%
+     </p>
+    </div>
+    <div class="wi">
+     <p id="windSpeed">
+         <img src="wind.png" alt="Wind" class="weatherr-icon">
+         Wind Speed: -- m/s
+     </p>
+</div>
+</div>
+
+      
+      <!-- Charts Section -->
+      <div class="charts-section">
+        <div class="chart-box">
+          <canvas id="tempBarChart"></canvas>
+        </div>
+        <div class="chart-box">
+          <canvas id="conditionDoughnutChart"></canvas>
+        </div>
+        <div class="chart-box">
+          <canvas id="tempLineChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="dashboard.js"></script>
+</body>
+</html>
