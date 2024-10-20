@@ -1,0 +1,563 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 100vh;
+    background-color: #5c5079;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    display:flex;
+    align-items:center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+    
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+    display:flex;
+    align-items:center;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 18%; /* Match sidebar width */
+    min-height: 100vh;
+    background-image: url('https://img.freepik.com/free-photo/fluffy-clouds-pastel-colorful-background-perfect-wallpapers_181624-61276.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .toplayer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.search-bar {
+   
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+    width: 90%;
+}
+
+.search-bar input {
+     width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+.search-bar button {
+    padding: 10px 30px;
+    font-size: 14px;
+    background-color: #4c53af;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 18px; 
+    white-space: nowrap;
+    box-shadow: 5px 5px #5c5079;
+}
+.search-bar button:hover {
+    background-color: #4b4164; /* Slightly darker shade on hover */
+}
+.centercontent
+{
+    display: flex;
+    gap: 40px;
+}
+
+.table-section {
+    background-color: rgba(249, 249, 249, 0.9);
+    width:100%;
+    height:auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.table-section h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: left;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: small;
+}
+
+th {
+    background-color: #c69ae6;
+}
+
+.chatbot-section {
+    background-color: rgba(249, 249, 249, 0.9);
+    width: 80%;
+    height:auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.chatbot-section h2{
+    text-align: center;
+}
+
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#chatResponse {
+    height: 365px;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: background-color 0.5s ease;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-y: auto;
+}
+
+#chatInput {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+
+}
+
+#chatButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4c53af;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+ .user-message {
+            background-color: #c69ae6;
+            padding: 8px;
+            margin: 4px 0;
+            border-radius: 8px;
+            align-self: flex-end;
+        }
+
+.bot-message {
+            background-color: #f5f5f5;
+            padding: 8px;
+            margin: 4px 0;
+            border-radius: 8px;
+            align-self: flex-start;
+        }
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #aaa;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+.nav-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.table-dropdown
+{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Dropdown Filter Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+}
+.dropdown-toggle {
+    background-color: #5c5079;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+    background-color: #4b4164;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-menu button {
+    background-color: white;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border: none;
+    width: 100%;
+    text-align: left;
+}
+
+.dropdown-menu button:hover {
+    background-color: #ddd;
+}
+
+/* Show dropdown on click */
+.show {
+    display: block;
+}
+
+/* Pagination Styles */
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+    
+    
+}
+
+.pagination button {
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    background-color:#4b4164;
+}
+
+.pagination button.active {
+    background-color:#4c53af;
+    color: white;
+}
+
+header{
+    display: none;
+}
+
+/* For very small screens (mobile phones, up to 480px wide) */
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .search-bar input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .search-bar button {
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+
+    .centercontent {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .chatbot-section {
+        width: auto;
+    }
+
+    table {
+        font-size: 12px;
+    }
+    .table-section
+    {
+        width:auto;
+    }
+    .user-profile {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+}
+
+/* For small screens (tablets and small desktops, up to 768px wide) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    header{
+        display: block;
+        background-color: #5c5079;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hamicon {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+    
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #ffffff;
+        margin: 5px 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        z-index: 1;
+    }
+
+    .logo-icon{
+        padding: 5px;
+    }
+    
+    .nav-menu ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .nav-menu li {
+        border-bottom: 1px solid #5c5079;
+    }
+    
+    .nav-menu li a {
+        display: flex;
+        align-items: center;
+        color: #5c5079;
+        text-decoration: none;
+        padding: 10px;
+    }
+    
+    .nav-menu li a:hover {
+        background-color: #555;
+    }
+    
+    .show {
+        display: block;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .search-bar input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .search-bar button {
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+
+
+    .centercontent {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .chatbot-section {
+        width: auto;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    .user-profile {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .table-section
+    {
+        width:auto;
+    }
+}
+
+/* For small screens (tablets and small desktops, up to 768px wide) */
+@media (max-width: 520px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .toplayer {
+        flex-wrap: nowrap;
+    }
+
+    .search-bar input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .search-bar button {
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+
+    .user-profile {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+}
+
+/* For medium-sized screens (desktops, up to 1024px wide) */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .toplayer {
+        flex-wrap: nowrap;
+    }
+
+    .search-bar input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .search-bar button {
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+
+    .user-profile {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    
+}

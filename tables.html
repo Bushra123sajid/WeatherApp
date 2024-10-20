@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Tables</title>
+  <link rel="stylesheet" href="tables.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Hamburger Menu -->
+    <header>
+      <img src="weatherlogo.png" alt="Logo" class="logo-icon">
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="dashboard.html"><img src="dashboardicon.png" class="hamicon"> Dashboard</a></li>
+          <li><a href="tables.html"><img src="tablesicon.png" class="hamicon"> Tables</a></li>
+        </ul>
+      </nav>
+    </header>
+   <!-- Sidebar -->
+   <nav class="sidebar">
+    <div class="logo">
+      <img src="weatherlogo.png" alt="Logo" class="logo-icon"> WeatherApp
+    </div>
+    <ul>
+      <li><a href="dashboard.html"><img src="dashboardicon.png" class="nav-icon"> Dashboard</a></li>
+      <li><a href="tables.html"><img src="tablesicon.png" class="nav-icon"> Tables</a></li>
+    </ul>
+  </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="toplayer">
+          <!-- Search Bar -->
+          <div class="search-bar">
+            <input type="text" placeholder="Search city..." id="searchCity">
+            <button id="searchButton">Get Weather</button>
+          </div>
+     <!-- User Profile (top-right corner) -->
+     <div class="user-profile">
+        <div class="profile-pic" id="profilePic" style="background-image: url('https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?size=338&ext=jpg&ga=GA1.1.1369675164.1728691200&semt=ais_hybrid-rr-similar');"></div>
+      </div>
+        </div>
+        <div class="centercontent">
+
+          
+      <!-- Table Section -->
+      <div class="table-section">
+        <div class="table-dropdown">
+          <h1>Weather Forecast Table</h1>
+            <!-- Filters will be inserted here -->
+        </div>
+        <table id="weatherTable">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Temperature</th>
+                    <th>Humidity</th>
+                    <th>Weather</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div class="pagination">
+            <button id="prevPageButton">Previous</button>
+            <span id="pageInfo"></span>
+            <button id="nextPageButton">Next</button>
+        </div>
+    </div>
+
+      <!-- Chatbot Section -->
+      <div class="chatbot-section">
+        <h2>Chat with Weather Bot</h2>
+        <div class="chat-box">
+            <div id="chatResponse"></div>
+            <input type="text" id="chatInput" placeholder="Ask about weather data..." />
+            <button id="chatButton">Send</button>
+        </div>
+    </div>
+    </div>
+  </div>
+
+  <script type="module" src="tables.js"></script>
+</body>
+</html>
